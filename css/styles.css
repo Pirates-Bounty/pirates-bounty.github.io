@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.navbar-fixed {
+  position: fixed;
+  height: 128px;
+}
+
+
+.nav-wrapper {
+  height: 64px;
+}
+
+nav {
+  background-color: #34282C;
+}
+
+footer.page-footer {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.responsive-img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*.row {
+  margin-bottom: 0;
+}*/
+
+.section.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-image: url(../img/pirates.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 32px;
+}
+
+.row.about {
+
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 32px;
+}
+
+.button-container-nav {
+  margin-bottom: 28px;
+  visibility: hidden;
+}
+
+.btn-download {
+  /*position: absolute;*/
+  bottom: 0;
+  left: 0;
+  margin: 0px 32px;
+}
+
+.section.screenshots {
+  height: auto;
+  width: auto;
+  background-color: black;
+}
+
+.row.screenshots-row {
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  max-width: 960px;
+  padding: 0;
+}
+
+.screenshots-h2 {
+  color: white;
+}
+
+.u-max-full-width {
+  width: 100%;
+}

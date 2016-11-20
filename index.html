@@ -13,13 +13,13 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Pirate's Bounty</a>
+          <a href="#top" class="brand-logo">Pirate's Bounty</a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
           <ul class="right hide-on-med-and-down">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Screenshots</a></li>
-            <li><a href="#">Team</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#team">Team</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li><a href="#">About</a></li>
@@ -40,6 +40,7 @@
     <main>
 
       <div class="section main">
+        <a class="anchor" id="top"></a>
         <div class="button-container">
           <a class="waves-effect waves-light btn-large btn-download">Download for Windows</a>
           <a class="waves-effect waves-light btn-large btn-download">Download for OSX</a>
@@ -48,6 +49,7 @@
       </div>
 
       <div class="section about">
+        <a class="anchor" id="about"></a>
         <div class="row">
           <div class="col s12 m6 offset-m1">
             <h2>About<br>Pirate's Bounty</h2>
@@ -64,6 +66,7 @@
       </div>
 
       <div class="section screenshots">
+        <a class="anchor" id="screenshots"></a>
         <div class="row screenshots-row">
           <h2 class="screenshots-h2">Screenshots</h2>
           <div class="demo" style="height:auto; width:auto;">
@@ -110,6 +113,7 @@
       </div>
 
       <div class="section">
+        <a class="anchor" id="team"></a>
         <div class="row">
         </div>
       </div>
@@ -159,6 +163,19 @@
             $btnNav.css('visibility', 'visible');
           } else {
             $btnNav.css('visibility', 'hidden');
+          }
+        });
+
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top,
+              }, 1000);
+              return false;
+            }
           }
         });
       });
